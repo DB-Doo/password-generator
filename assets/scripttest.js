@@ -11,7 +11,7 @@ function generatePassword() {
     var includeNumbers = confirm("Would you like to include numb3rs?");
     var includeSymbols = confirm("Would you like to include spec!al ch@racter$?");
 
-// if user doesnt choose one option, make them choose again. loops
+// if user doesnt choose at least one option make them choose again. loops
     while (!includeUppercase && !includeLowercase && !includeNumbers && !includeSymbols) {
         alert("PLEASE! Select at least one option! I need SOMETHING to work with...");
         includeUppercase = confirm("WOULD YOU LIKE TO INCLUDE UPPERCASE LETTERS?");
@@ -31,7 +31,7 @@ function generatePassword() {
     if (includeLowercase) allChars += lowercaseChars;
     if (includeNumbers) allChars += numberChars;
     if (includeSymbols) allChars += symbolChars;
-// empty string for the password
+// filling the empty string for the password 
     var password = "";
     for (var i = 0; i < length; i++) {
         password += allChars.charAt(Math.floor(Math.random() * allChars.length));
@@ -42,7 +42,7 @@ function generatePassword() {
 
 
 // the function to write the generated password to the "input" element
-// Write password to the #password input
+// write password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
@@ -51,6 +51,5 @@ function writePassword() {
 }
 
 // selects the generate button element by its ID
-// Add event listener to generate button
 var generateBtn = document.querySelector("#generate");
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", writePassword); // Add event listener to generate button
