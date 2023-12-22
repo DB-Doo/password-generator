@@ -1,4 +1,5 @@
 Overview
+<img src="./assets/screenshot.png"/>
 
 This JavaScript application empowers users, especially employees handling sensitive data, to generate secure and random passwords based on their selected criteria. It offers a dynamic, responsive user interface that functions seamlessly across various screen sizes.
 
